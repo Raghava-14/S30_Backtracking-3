@@ -1,13 +1,13 @@
-//Time = 
+//Time = O(n!)
 //Space = O(n)
 
 class Solution {
     public List<List<String>> solveNQueens(int n) {
-        List<List<String>> solutions = new ArrayList<>(); // Initialize an empty list to store all the solutions
-        int[] queens = new int[n]; // Initialize an array to keep track of the column position of each queen on each row
+        List<List<String>> solutions = new ArrayList<>(); 
+        int[] queens = new int[n]; 
         Arrays.fill(queens, -1); // Fill the array with -1, indicating that no queen has been placed yet
         solveNQueens(solutions, queens, 0, n); // Call the recursive helper function to find all solutions
-        return solutions; // Return the list of solutions
+        return solutions;
     }
     
     private void solveNQueens(List<List<String>> solutions, int[] queens, int row, int n) {
